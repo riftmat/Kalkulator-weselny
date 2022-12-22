@@ -263,7 +263,7 @@ footer img:hover {
     flex-direction: column;
 }
 
-h2 {
+.opis-dwa h2 {
     background-color: rgb(148, 81, 120);
     color: white;
     padding: 5px;
