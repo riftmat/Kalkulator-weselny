@@ -1,4 +1,4 @@
-<h4 align="center">Kalkulator kosztów wesela</h4>
+<h1 align="center" font-size: 42px;>Kalkulator kosztów wesela</h1>
 
 ## Project Overview 🎉
   Projekt strony tytułowej, przygotowana do wypełnienia właściwą treścią i podłączenia do niej kolejnych stron.
