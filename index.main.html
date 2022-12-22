@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kalkulator kosztów ślubnych, sprawdź ile wydasz!">
+    <meta name="keywords" content="Ślub, koszta, kalkulator, ile kosztuje ślub, jak sprawdzić koszt wesela, wesele, cena wesela, kalkulator weselny">
+    <meta name="author" content="Patryk Lachowicz">
+    <title>Kalkulator kosztów weselnych</title>
+    <link rel="stylesheet" href="style.main.css"/>
+    <script src="script.main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <img src="images/menu.png" alt="ikona menu" onclick="menuLeft()">
+    </nav>
+    <div class="menu-left" id="menu-left">
+        <div class="menu-left-block-top">
+            <div><a href="index.main.html"><img src="images/home.png" alt="ikona poworotu na stronę główną"><p>Strona główna</p></a></div>
+            <div><a href="index.about.html"><img src="images/news.png" alt="ikona przejścia do bloga"><p>O stronie</p></a></div>
+        </div>
+    </div>
+    <main>
+        <h1>Sprawdź koszta ślubu</h1>
+        <div class="opis">
+            <p>
+                Ślub to wyjątkowy moment, wiążę się on jednak z kosztami. 
+                Oczywiste więc, że przyszła para młoda chciałaby znać koszt
+                takiej imprezy.
+            </p>
+            <p>Z pomocą przychodzi <b>kalkulator weselny!</b></p>
+            <div class="zl">
+                <div class="zll">
+                    <p>Koszt napojów i alkoholi równy jest:</p><b><p id="calosc" class="licznik">0</p></b><p>zł</p>
+                </div>
+                <div class="ciddle"></div>
+                <div class="zll">
+                    <p>Koszt jedzenia jest równy:</p><b><p id="jedze" class="licznik">0</p></b><p>zł</p>
+                </div>
+            </div>
+        </div>
+        <div class="color-bar"></div>
+        <div class="calculator" id="calculator">
+            <div class="osoby">
+                <p>Liczba gości:</p>
+                <input type="number" id="goscie" oninput="licz()" onchange="liczjedzenie()">
+            </div>
+            <div class="litry">
+                <div class="alkohol">
+                    <h2>Alkohole</h2>
+                    <div class="alkohol-moc">
+                        <p>Butelki wódki 0.5L:</p>
+                        <input type="number" class="pelne">
+                    </div>
+                    <div class="wino">
+                        <p>Butelki wina 0.7L:</p>
+                        <input type="number" class="pelne">
+                    </div>
+                    <div class="szamp">
+                        <p>Butelki szampana 0.5L:</p>
+                        <input type="number" class="pol">
+                    </div>
+                    <div class="bimb">
+                        <p>Butelki bimbru 0.5L:</p>
+                        <input type="number" class="pol">
+                    </div>
+                </div>
+                <div class="napoje">
+                    <h2>Napoje</h2>
+                    <div class="soki">
+                        <p>Butelki soków 1L:</p>
+                        <input type="number"  class="pelne">
+                    </div>
+                    <div class="woda">
+                        <p>Butelki wody 1L:</p>
+                        <input type="number" class="pol">
+                    </div>
+                </div>
+                <div class="jedzenie">
+                    <h2>Posiłki</h2>
+                    <div class="dania-glowne">
+                        <p>Ilość dań głównych:</p>
+                        <input type="number" id="daniagl" oninput="liczjedzenie()" max="10" min="1">
+                    </div>
+                    <div class="przystawki">
+                        <p>Ilość przystawek:</p>
+                        <input type="number" id="przys" oninput="liczjedzenie()" max="20" min="0">
+                    </div>
+                    <div class="przek">
+                        <p>Ilość przekąsek:</p>
+                        <input type="number" id="przek" oninput="liczjedzenie()" max="30" min="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="color-bar"></div>
+    </main>
+    <footer>
+        <p>Autor: Patryk Lachowicz</p>
+        <div class="zdje">
+            <p>Kontakt:</p><a href="https://github.com/riftmat"><img src="images/github.png"></a>
+        </div>
+    </footer>
+</body>
+</html>
