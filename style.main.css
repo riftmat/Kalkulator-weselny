@@ -280,3 +280,45 @@ footer img:hover {
     width: 70%;
     flex-wrap: wrap;
 }
+
+.options {
+    background-color: rgb(247, 239, 243);
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    rotate: 180deg;
+    transition: 0.5s;
+}
+
+.options:active {
+    scale: 0.8;
+    background-color: rgb(148, 81, 120);
+    transition: 0.5s;
+}
+
+.right {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(247, 239, 243);
+    border-radius: 0 5px 5px 5px;
+}
+
+.right div {
+    margin: 5px;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(223, 175, 199);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px gray;
+}
+
+.cit {
+    font-size: 10px;
+}

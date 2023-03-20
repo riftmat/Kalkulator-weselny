@@ -1,3 +1,6 @@
+const options = document.getElementById("options");
+const right = document.getElementById("right");
+
 function menuLeft() {
   const a = document.getElementById("menu-left");
   if (a.style.display === "block") {
@@ -6,6 +9,16 @@ function menuLeft() {
     a.style.display = "block";
   }
 };
+
+options.addEventListener("click", () => {
+  if (right.style.display === "flex") {
+    right.style.display = "none";
+    options.style.rotate = "180deg"
+  } else {
+    right.style.display = "flex";
+    options.style.rotate = "0deg"
+  }
+});
 
 let cie = document.getElementById("goscie");
 
@@ -21,8 +34,15 @@ function licz() {
   pl.item(1).value = cie.value * 0.5; //  bimber
   pl.item(2).value = cie.value * 0.5; // woda
 
+  let w = document.getElementById("w");
+  let ww = document.getElementById("ww");
+  let sz = document.getElementById("sz");
+  let b = document.getElementById("b");
+  let s = document.getElementById("s");
+  let water = document.getElementById("water");
+
   let calo = document.getElementById("calosc");
-  calo = (35 * pel.item(0).value) + (25 * pel.item(1).value) + (4.50 * pel.item(2).value) + (25 * pl.item(0).value) + (20 * pl.item(1).value) + (1.9 * pl.item(1).value);
+  calo = (w.value * pel.item(0).value) + (ww.value * pel.item(1).value) + (s.value * pel.item(2).value) + (sz.value * pl.item(0).value) + (b.value * pl.item(1).value) + (water.value * pl.item(1).value);
   document.getElementById("calosc").innerHTML = (calo).toString();  
 
 }; // liczenie picia
@@ -31,13 +51,17 @@ function liczjedzenie() {
   let gl = document.getElementById("daniagl"); // danie główne
   let przy = document.getElementById("przys"); // przystawki
   let prze = document.getElementById("przek"); // przekąski
+  let danO = document.getElementById("danO");
+  let danT = document.getElementById("danT");
+  let danTT = document.getElementById("danTT");
   
-  gl = gl.value * 60;
-  przy = przy.value * 35;
-  prze = prze.value * 25;
+  gl = gl.value * danO.value;
+  przy = przy.value * danT.value;
+  prze = prze.value * danTT.value;
 
   let jed = document.getElementById("jedze");
   jed = (gl * cie.value) + (przy * cie.value) + (prze * (0.3 * cie.value));
   console.log(jed);
   document.getElementById("jedze").innerHTML = (jed).toString();  
 } // liczenie jedzenia
+
