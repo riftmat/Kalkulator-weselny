@@ -44,7 +44,7 @@
         <div class="calculator" id="calculator">
             <div class="osoby">
                 <p>Liczba gości:</p>
-                <input type="number" id="goscie" oninput="licz()" onchange="liczjedzenie()">
+                <input type="number" id="goscie" oninput="licz();liczjedzenie()">
             </div>
             <div class="litry">
                 <div class="alkohol">
@@ -103,47 +103,47 @@
 
                 <div>
                     <p>Cena za butelkę wódki:</p>
-                    <input type="number" id="w" placeholder="35">
+                    <input type="number" id="w" value="35" oninput="licz()">
                 </div>
 
                 <div>
                     <p>Cena za butelkę wina:</p>
-                    <input type="number" id="ww" placeholder="25">
+                    <input type="number" id="ww" value="25" oninput="licz()">
                 </div>
 
                 <div>
                     <p>Cena za butelkę szampana:</p>
-                    <input type="number" id="sz" placeholder="25">
+                    <input type="number" id="sz" value="25" oninput="licz()">
                 </div>
 
                 <div>
                     <p>Cena za butelkę bimbru:</p>
-                    <input type="number" id="b" placeholder="20">
+                    <input type="number" id="b" value="20" oninput="licz()">
                 </div>
 
                 <div>
                     <p>Cena za butelkę soku:</p>
-                    <input type="number" id="s" placeholder="4.50">
+                    <input type="number" id="s" value="4.50" oninput="licz()">
                 </div>
 
                 <div>
                     <p>Cena za butelkę wody:</p>
-                    <input type="number" id="water" placeholder="1.9">
+                    <input type="number" id="water" value="1.9" oninput="licz()">
                 </div>
 
                 <div>
                     <p>Cena za jedno danie główne:</p>
-                    <input type="number" id="danO" placeholder="60">
+                    <input type="number" id="danO" value="60" oninput="liczjedzenie()">
                 </div>
 
                 <div>
                     <p>Cena za przystawkę:</p>
-                    <input type="number" id="danT" placeholder="35">
+                    <input type="number" id="danT" value="35" oninput="liczjedzenie()">
                 </div>
 
                 <div>
                     <p>Cena za przekąskę:</p>
-                    <input type="number" id="danTT" placeholder="25">
+                    <input type="number" id="danTT" value="25" oninput="liczjedzenie()">
                 </div>
 
                 <p class="cit">*posiłki w przeliczeniu na jedną osobę</p>
