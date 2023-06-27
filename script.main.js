@@ -61,7 +61,6 @@ function liczjedzenie() {
 
   let jed = document.getElementById("jedze");
   jed = (gl * cie.value) + (przy * cie.value) + (prze * (0.3 * cie.value));
-  console.log(jed);
   document.getElementById("jedze").innerHTML = (jed).toString();  
 } // liczenie jedzenia
 
